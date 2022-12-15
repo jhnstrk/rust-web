@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+
+weblib = { path = "../weblib" }
