@@ -1,3 +1,4 @@
+use gloo_net::http::Request;
 use yew::prelude::*;
 
 use weblib::Video;
@@ -40,13 +41,13 @@ fn app() -> Html {
 
     let on_video_select = {
         let selected_video = selected_video.clone();
-        Callback::from(move |video: Video| {
-            selected_video.set(Some(video))
-        })
+        Callback::from(move |video: Video| selected_video.set(Some(video)))
     };
 
-    let details = selected_video.as_ref().map(|video| html! {
-        <VideoDetails video={video.clone()} />
+    let details = selected_video.as_ref().map(|video| {
+        html! {
+            <VideoDetails video={video.clone()} />
+        }
     });
     html! {
         <>
