@@ -18,7 +18,8 @@ opt-level = 'z'
 lto = true
 
 [dependencies]
-yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
+yew = { version = "0.20", features = ["csr"] }
+yew-bootstrap = "0.5.4"
 gloo-net = "0.2"
 serde = { version = "1.0", features = ["derive"] }
 wasm-bindgen-futures = "0.4"

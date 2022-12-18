@@ -828,7 +828,8 @@ checksum = "f40009d85759725a34da6d89a94e63d7bdc50a862acf0dbc7c8e488f1edcb6f5"
 [[package]]
 name = "yew"
 version = "0.20.0"
-source = "git+https://github.com/yewstack/yew/#d14fcd2e2daa2fe3c590bd85485a236995fa3d99"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5dbecfe44343b70cc2932c3eb445425969ae21754a8ab3a0966981c1cf7af1cc"
 dependencies = [
  "console_error_panic_hook",
  "futures",
@@ -858,12 +859,24 @@ dependencies = [
  "wasm-bindgen-futures",
  "weblib",
  "yew",
+ "yew-bootstrap",
+]
+
+[[package]]
+name = "yew-bootstrap"
+version = "0.5.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a3dee225ab715926159b7ef138adc4439266da8ff40b9ef24197e75b222868ee"
+dependencies = [
+ "log",
+ "yew",
 ]
 
 [[package]]
 name = "yew-macro"
 version = "0.20.0"
-source = "git+https://github.com/yewstack/yew/#d14fcd2e2daa2fe3c590bd85485a236995fa3d99"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b64c253c1d401f1ea868ca9988db63958cfa15a69f739101f338d6f05eea8301"
 dependencies = [
  "boolinator",
  "once_cell",
