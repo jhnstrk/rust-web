@@ -3,6 +3,20 @@ name = "yew-app"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+# Optimize size
+# https://yew.rs/docs/next/advanced-topics/optimizations
+# less code to include into binary
+panic = 'abort'
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# optimization for size ( more aggressive )
+opt-level = 'z'
+# optimization for size
+# opt-level = 's'
+# link time optimization using using whole-program analysis
+lto = true
+
 [dependencies]
 yew = { git = "https://github.com/yewstack/yew/", features = ["csr"] }
 gloo-net = "0.2"
@@ -10,3 +24,4 @@ serde = { version = "1.0", features = ["derive"] }
 wasm-bindgen-futures = "0.4"
 
 weblib = { path = "../weblib" }
+

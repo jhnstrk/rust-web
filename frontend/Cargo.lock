@@ -762,6 +762,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "weblib"
+version = "0.1.0"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "windows-sys"
 version = "0.42.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -846,6 +853,10 @@ dependencies = [
 name = "yew-app"
 version = "0.1.0"
 dependencies = [
+ "gloo-net",
+ "serde",
+ "wasm-bindgen-futures",
+ "weblib",
  "yew",
 ]
 
